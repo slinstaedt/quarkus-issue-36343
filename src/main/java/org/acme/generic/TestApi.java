@@ -2,6 +2,7 @@ package org.acme.generic;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
 
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
@@ -11,6 +12,7 @@ interface TestApi {
 	interface GenericFunction<R> {
 
 		@GET
+		@Produces("text/plain;charset=UTF-8")
 		R get();
 	}
 
